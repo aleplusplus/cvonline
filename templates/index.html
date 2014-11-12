@@ -1,3 +1,4 @@
+    {% load staticfiles %}
     <!DOCTYPE html>
     <html lang="es">
     <head>
@@ -8,37 +9,17 @@
       <meta name="author" content="Alejandro">
       <meta name="description" content="Mini hoja de vida Alejandro Labrada Diaz, Ecuador, Quito.">
       <!-- styles -->
-      <link href="css/bootstrap.css" rel="stylesheet">
-      <link href="css/bootstrap-responsive.css" rel="stylesheet">
-      <link href="css/style-single-page.css" rel="stylesheet">
-      <link href="font/css/fontello.css" rel="stylesheet">
+      <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+      <link href="{% static 'css/style-single-page.css' %}" rel="stylesheet">
+      <link href="{% static 'font/css/fontello.css' %}" rel="stylesheet">
       <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
       <!-- Add jQuery library -->
-      <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-      <!-- Add fancyBox main JS and CSS files -->
-      <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
-      <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
-      <script>
-      $(document).ready(function() {
-        $(".fancybox-thumb").fancybox({
-          helpers	: {
-            title	: {
-              type: 'inside'
-            },
-            overlay : {
-              css : {
-                'background' : 'rgba(1,1,1,0.65)'
-              }
-            }
-          }
-        });
-      });
-      </script>
+      <script type="text/javascript" src="{% static 'js/jquery-1.10.1.min.js' %}"></script>
     </head>
     <body>
       <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
-          <div class="container">
+          <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
             <ul class="nav nav-collapse pull-center">
               <li><a href="#profile"><i class="icon-user"></i> Perfil</a></li>
               <li><a href="#skills"><i class="icon-trophy"></i> Habilidades</a></li>
@@ -55,7 +36,7 @@
       <div class="clearfix">
         <!--Profile container-->
         <div id="profile" class="container">
-          <div class="span3"> <img src="img/mini.png"> </div>
+          <div class="span3"> <img src="{% static 'img/mini.png' %}"> </div>
           <div class="span5">
             <h1>Alejandro Labrada Diaz</h1>
             <h3>Bootstrap Theme Developer</h3>
@@ -63,12 +44,9 @@
             <a href="##myModal" class="hire-me" role="button" data-toggle="modal"><i class="icon-paper-plane"></i> Contacteme </a>
             <div class="row social">
               <ul class="social-icons">
-                <li><a href="#" target="_blank"><img src="img/fb.png" alt="facebook"></a></li>
-                <li><a href="#" target="_blank"><img src="img/tw.png" alt="twitter"></a></li>
-                <li><a href="#" target="_blank"><img src="img/go.png" alt="google plus"></a></li>
-                <li><a href="#" target="_blank"><img src="img/pin.png" alt="pinterest"></a></li>
-                <li><a href="#" target="_blank"><img src="img/st.png" alt="stumbleupon"></a></li>
-                <li><a href="#" target="_blank"><img src="img/dr.png" alt="dribbble"></a></li>
+                <li><a href="#" target="_blank"><img src="{% static 'img/fb.png' %}" alt="facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="{% static 'img/tw.png' %}" alt="twitter"></a></li>
+                <li><a href="#" target="_blank"><img src="{% static 'img/go.png' %}" alt="google plus"></a></li>
               </ul>
             </div>
           </div>
@@ -130,24 +108,24 @@
           <h2>My Work</h2>
           <ul class="work-images">
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/1.jpg" title="Image 01"><img src="img/1-thumb.jpg" /></a></div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="{% static 'img/1.jpg' %}" title="Image 01"><img src="{% static 'img/1-thumb.jpg' %}" /></a></div>
             </li>
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/2.jpg"><img src="img/2-thumb.jpg" /></a></div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="{% static 'img/2.jpg' %}"><img src="{% static 'img/2-thumb.jpg' %}" /></a></div>
             </li>
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/3.jpg"><img src="img/3-thumb.jpg" /></a></div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="{% static 'img/3.jpg' %}"><img src="{% static 'img/3-thumb.jpg' %}" /></a></div>
             </li>
           </ul>
           <ul class="work-images">
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/4.jpg"><img src="img/4-thumb.jpg" /></a></div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="{% static 'img/4.jpg' %}"><img src="{% static 'img/4-thumb.jpg' %}" /></a></div>
             </li>
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/5.jpg"><img src="img/5-thumb.jpg" /></a></div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="{% static 'img/5.jpg' %}"><img src="{% static 'img/5-thumb.jpg' %}" /></a></div>
             </li>
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/6.jpg"><img src="img/6-thumb.jpg" /></a></div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="{% static 'img/6.jpg' %}"><img src="{% static 'img/6-thumb.jpg' %}" /></a></div>
             </li>
           </ul>
           <!--Dummy images by The Fox And King :: http://dribbble.com/snootyfox-->
@@ -157,20 +135,17 @@
         <div id="resume" class="container">
           <h2>My Resume</h2>
           <h3>You can download my resume for your reference and I hope that we will meet very soon! :)</h3>
-          <div class="btn-center"> <a href="#" class="hire-me"><i class="icon-download"></i> Download Resume</a>
-            <h2>125kb</h2>
+          <div class="btn-center"> <a href="{% static 'cv/CV-Alejandro-Labrada-Diaz.pdf' %}" class="hire-me" target="_blank"><i class="icon-download"></i> Download Resume</a>
+            <h2>184kb</h2>
           </div>
         </div>
         <!--END: Resume container-->
         <!-- Social Icons -->
         <div class="row social">
           <ul class="social-icons">
-            <li><a href="#" target="_blank"><img src="img/fb.png" alt="facebook"></a></li>
-            <li><a href="#" target="_blank"><img src="img/tw.png" alt="twitter"></a></li>
-            <li><a href="#" target="_blank"><img src="img/go.png" alt="google plus"></a></li>
-            <li><a href="#" target="_blank"><img src="img/pin.png" alt="pinterest"></a></li>
-            <li><a href="#" target="_blank"><img src="img/st.png" alt="stumbleupon"></a></li>
-            <li><a href="#" target="_blank"><img src="img/dr.png" alt="dribbble"></a></li>
+            <li><a href="#" target="_blank"><img src="{% static 'img/fb.png' %}" alt="facebook"></a></li>
+            <li><a href="#" target="_blank"><img src="{% static 'img/tw.png' %}" alt="twitter"></a></li>
+            <li><a href="#" target="_blank"><img src="{% static 'img/go.png' %}" alt="google plus"></a></li>
           </ul>
         </div>
         <!-- END: Social Icons -->
@@ -201,8 +176,8 @@
         </div>
       </div>
       <!-- Scripts -->
-      <script src="js/vertical-scroll.js"></script>
-      <script src="js/bootstrap.min.js"></script>
+      <script src="{% static 'js/vertical-scroll.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
       <script>
       $('#myModal').modal('hidden')
       </script>
